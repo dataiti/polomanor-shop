@@ -1,0 +1,51 @@
+.flag-new {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+        color: #dd3434;
+    }
+
+    span {
+        font-size: 10px;
+        position: absolute;
+        color: var(--white);
+        transform: translateY(-5px);
+    }
+}
+
+.flag-hot {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+        color: #ccb79a;
+    }
+
+    span {
+        font-size: 10px;
+        font-weight: 500;
+        color: var(--white);
+        position: absolute;
+        transform: translateY(-5px);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #a8a7a7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--white);
+        box-shadow: 0px 0px 5px 2px rgba(97, 96, 96, 0.6);
+    }
+}

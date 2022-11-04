@@ -1,0 +1,287 @@
+.wrapper {
+    .previos-btn {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .form {
+        position: relative;
+        border-radius: 30px;
+        padding: 20px 40px;
+        background-color: var(--white);
+        text-align: center;
+        margin-top: 20px;
+
+        .image {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            max-width: 100%;
+            border: 3px dashed var(--gray);
+            border-radius: 30px;
+            transform: all 0.3s;
+
+            &:hover {
+                border-color: var(--primary);
+                background-color: var(--gray-second);
+            }
+
+            .upload-image {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                label {
+                    display: block;
+                    width: 100%;
+                    height: 400px;
+                    cursor: pointer;
+                    z-index: 10;
+                    overflow: hidden;
+                }
+
+                .choose-image {
+                    position: absolute;
+                    text-align: center;
+
+                    .icon-upload {
+                        font-size: 70px;
+                        color: var(--gray);
+                        z-index: 1;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        font-weight: 500;
+                        padding: 5px 10px;
+                        border-radius: 99px;
+                        color: var(--white);
+                        background-color: var(--gray);
+                    }
+                }
+
+                .has-image {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 30px;
+                    }
+
+                    &:hover {
+                        .action {
+                            opacity: 1;
+                            pointer-events: visible;
+                        }
+
+                        .overlay {
+                            position: absolute;
+                            inset: 0;
+                            background-color: rgba(0, 0, 0, 0.4);
+                            mix-blend-mode: multiply;
+                            opacity: 0.6;
+                        }
+                    }
+
+                    .overlay {
+                        border-radius: 30px;
+                        transition: all 0.3s;
+                    }
+
+                    .action {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: all 0.25s;
+
+                        .add-btn,
+                        .delete-btn {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            font-size: 20px;
+                        }
+
+                        .add-btn {
+                            background-color: #e2f5e9;
+                            color: var(--primary);
+
+                            &:hover {
+                                background-color: #cef6dc;
+                                cursor: pointer;
+                            }
+                        }
+
+                        .delete-btn {
+                            background-color: #e2f5e9;
+                            color: var(--primary);
+                            background-color: #ffe7e1;
+                            color: #f89090;
+
+                            &:hover {
+                                background-color: #f9d5cd;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .list-image {
+                margin-top: 20px;
+                width: 100%;
+                height: 104px;
+                border: 3px dashed var(--gray);
+                background-color: var(--white);
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 6px;
+                border-radius: 10px;
+                padding: 0 5px;
+
+                .image-item {
+                    max-width: 100%;
+                    border-radius: 5px;
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+
+            .progress {
+                position: absolute;
+                bottom: -15px;
+                left: 0;
+                right: 10px;
+                height: 5px;
+                border-radius: 99px;
+                background-image: linear-gradient(-225deg, #69eacb 0%, #eaccf8 48%, #6654f1 100%);
+            }
+        }
+
+        .detail {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+
+            .input-title {
+                border-color: var(--white);
+                background-image: linear-gradient(120deg, #f5f5f5 0%, #ebedee 100%);
+            }
+
+            .field-option {
+                background-image: linear-gradient(120deg, #f5f5f5 0%, #ebedee 100%);
+                padding: 10px 20px;
+                display: flex;
+                align-items: center;
+                border-radius: 10px;
+                position: relative;
+
+                .list {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 14px;
+
+                    li {
+                        padding: 8px 10px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        background-color: var(--gray);
+                        border-radius: 6px;
+                        color: #444545;
+
+                        .text {
+                            font-size: 12px;
+                        }
+
+                        .icon {
+                            cursor: pointer;
+                        }
+
+                        &:hover {
+                            background-color: #b6b8b8;
+                        }
+                    }
+
+                    .input {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+
+                        .btn {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 0;
+                            position: absolute;
+                            right: 4px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background-color: #e2f5e9;
+                            color: var(--primary) !important;
+
+                            &:hover {
+                                background-color: #cef6dc;
+                                cursor: pointer;
+                            }
+
+                            .icon {
+                                width: 14px;
+                                height: 14px;
+                            }
+                        }
+
+                        input {
+                            padding: 10px 30px 10px 10px;
+                            background-color: #fff;
+                            border-radius: 99px;
+                            margin: 0;
+                        }
+                    }
+                }
+
+                .mes-error {
+                    position: absolute;
+                    left: 20px;
+                    bottom: -22px;
+                    font-size: 12px;
+                    color: red;
+                }
+            }
+        }
+
+        .descriptions {
+            margin: 20px 0;
+        }
+
+        .submit-btn {
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

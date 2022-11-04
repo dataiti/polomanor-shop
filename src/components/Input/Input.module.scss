@@ -1,0 +1,13 @@
+.input {
+    width: 100%;
+    padding: 14px 40px;
+    border-radius: 99px;
+    transition: all 0.25s;
+    font-family: var(--font-family);
+    user-select: none;
+    border: 2px solid transparent;
+
+    &:focus {
+        border-color: var(--primary);
+    }
+}

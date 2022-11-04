@@ -1,0 +1,92 @@
+.wrapper {
+    .link-banner {
+        width: 100%;
+        transition: all 0.25s;
+
+        .img {
+            display: block;
+            width: 100%;
+            height: 700px;
+            border-radius: 20px;
+            object-fit: contain;
+            background-color: #e1ebf7;
+        }
+    }
+
+    .navbar-filter {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 15px;
+        margin: 20px 0;
+        background-color: #dae3e5;
+        color: var(--primary);
+        border-radius: 6px;
+
+        .title {
+            font-size: 14px;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+        .navbar-item {
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--white);
+            min-width: 90px;
+            padding: 6px 10px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--secondary);
+            }
+
+            &.active {
+                background-color: var(--primary);
+                color: var(--white);
+            }
+        }
+        .select {
+            position: relative;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--primary);
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            cursor: pointer;
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 6px 15px;
+                border-radius: 4px;
+                min-width: 180px;
+                background-color: var(--white);
+            }
+
+            .list-option {
+                position: absolute;
+                z-index: 10;
+                border-radius: 4px;
+                bottom: -62px;
+                min-width: 180px;
+                background-color: var(--white);
+                overflow: hidden;
+
+                .option {
+                    padding: 6px 15px;
+
+                    &:hover {
+                        background-color: var(--gray-second);
+                    }
+                }
+            }
+        }
+    }
+}

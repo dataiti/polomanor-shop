@@ -1,0 +1,29 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .input-wrapper {
+        position: relative;
+
+        .errors-mes {
+            position: absolute;
+            left: 22px;
+            bottom: -20px;
+            color: #F10301;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .icon-check {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            color: #52F630;
+            top: 50%;
+            left: 14px;
+            transform: translateY(-50%);
+        }
+    }
+}

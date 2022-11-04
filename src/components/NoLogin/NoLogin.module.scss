@@ -1,0 +1,24 @@
+.not-user {
+    width: 100%;
+
+    .container {
+        background-color: #ffe7e1;
+        padding: 20px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .text {
+            color: #f89090;
+        }
+
+        .action {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: 300px;
+        }
+    }
+}

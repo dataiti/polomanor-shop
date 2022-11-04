@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+
+    .container {
+        flex: 1;
+        background-color: var(--background);
+        margin-left: 340px;
+        min-height: 100vh;
+
+        .content {
+            margin: 20px 60px;
+            max-width: 100%;
+        }
+    }
+}

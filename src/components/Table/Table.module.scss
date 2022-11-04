@@ -1,0 +1,36 @@
+.wrapper {
+    overflow-x: auto;
+    background-color: var(--white);
+    border-radius: 10px;
+
+    table {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    thead {
+        background-color: rgb(240, 238, 238);
+    }
+
+    th,
+    td {
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    th {
+        padding: 15px 20px;
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    td {
+        padding: 10px 10px;
+        background-color: var(--white);
+        font-size: 12px;
+    }
+
+    td:nth-child(2) {
+        width: 36%;
+    }
+}

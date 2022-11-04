@@ -1,0 +1,61 @@
+.wrapper {
+    min-height: 100vh;
+
+    &.loading {
+        opacity: 0.5;
+        position: fixed;
+        left: 400px;
+        right: 60px;
+        top: 20px;
+        bottom: 0;
+        pointer-events: none;
+    }
+
+    .table-info {
+        display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 10px;
+
+                .detail {
+
+                    .name {
+                        color: var(--primary);
+                        font-size: 14px;
+                        font-weight: 500;
+                        display: flex;
+                        gap: 5px;
+
+                        .role {
+                            font-size: 10px;
+                            line-height: 2;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                            color: #fda90a;
+                        }
+
+                        .icon-check {
+                            font-size: 14px;
+                            display: flex;
+                            align-items: center;
+                            color: #20d5ec;
+                        }
+                        
+                    }
+
+                    .email {
+                        color: var(--text);
+                        font-size: 12px;
+                        font-style: italic;
+                        text-align: start;
+                    }
+                }
+    }
+
+    .action {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
